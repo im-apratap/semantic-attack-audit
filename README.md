@@ -10,7 +10,7 @@ This repository contains the released experimental data for our paper:
 
 Locally deployed LLMs (e.g., via Ollama) run without the moderation and abuse detection present in API-served models, so their safety depends on the input-side defenses chosen at server setup. This work **audits six such defenses** under *semantic* jailbreak attacks. Some defenses publish formal guarantees (SmoothLLM, Erase-and-Check, Sequential Monitors); others rely on empirical detection results (Semantic Smoothing, Self-Denoised Smoothing, Perplexity Filtering).
 
-Instead of merely observing that defenses fail, we trace each failure back to the **specific assumption** the defense was designed around: for every defense we (1) extract the condition it relies on, (2) derive the empirical signature a violation should produce, and (3) test that prediction on **six open-weight models (14B–35B parameters)** with a corpus of **100 jailbreak prompts** drawn from **40+ public sources**, totalling **13,800 evaluation records**.
+Instead of merely observing that defenses fail, we trace each failure back to the **specific assumption** the defense was designed around: for every defense we (1) extract the condition it relies on, (2) derive the empirical signature a violation should produce, and (3) test that prediction on **six open-weight models (14B–35B parameters)** with a corpus of **100 jailbreak prompts** drawn from **40+ public sources**, totalling **13,800 evaluation records in the main campaign**. The repository also includes later, targeted in-scope validation runs; those supplementary records are separate from the 13,800-record total.
 
 ---
 
@@ -45,6 +45,8 @@ Instead of merely observing that defenses fail, we trace each failure back to th
 | Sequential Monitors | 1,000 | 6,000 | K=4 turns, monitor per turn |
 | Perplexity Filtering | 100 | 3,000 | 5 thresholds, offline scoring |
 | **Total** | — | **13,800** | — |
+
+The totals above describe the main evaluation campaign only. Additional targeted validation artifacts are in `results_in_scope_validation/` and should not be added to these totals without applying the corresponding run-specific counting rules.
 
 ---
 
@@ -123,17 +125,25 @@ The six defenses do not fail randomly. Each failure traces to a specific design 
 
 ```
 .
-├── csv_results_defence/            # Per-defense result CSVs
-│   ├── smooth_llm_results.csv
-│   ├── erase_and_check_results.csv
+├── results_defence_applied/        # Main per-defense result CSVs
 │   ├── Self_denoised_results.csv
+│   ├── erase_and_check_results.csv
+│   ├── perplexity_filtering_results_analyzed.csv
 │   ├── semantic_smoothing_results.csv
 │   ├── sequential_monitor_results.csv
-│   └── perplexity_filtering_results_analyzed.csv
-├── without_defence/                # Baseline (no defense)
-│   ├── LEADERBOARD_SUMMARY.csv
+│   └── smooth_llm_results.csv
+├── results_without_defence/        # Baseline results and model responses (JSON)
 │   ├── FULL_REPORT_WITH_RESPONSES.json
-│   └── <model>_FULL_RESPONSES.json  # per-model raw responses
+│   └── <model>_FULL_RESPONSES.json
+├── results_in_scope_validation/    # Supplementary validation runs
+│   ├── erase_and_check_results/
+│   ├── output_perplexity_filtering/
+│   ├── sds_results/
+│   ├── semantic_smoothing_results/
+│   ├── sm_results/
+│   └── smoothllm_results/
+├── DATA_LICENSE.md
+├── LICENSE.md
 └── README.md
 ```
 
@@ -143,7 +153,7 @@ The paper's anonymous artifact (paper source + analysis code) is available at: *
 
 ## Responsible Disclosure
 
-Following standard practice in security measurement, the exact attack prompts are provided for documentation and reproducibility, but **harmful model completions are excluded** from this release to prevent misuse.
+This release contains the evaluation prompts and model-generated responses, including responses that may contain harmful material. They appear in the baseline response files and in the defense-applied and validation result records. Handle and redistribute these artifacts responsibly; their inclusion is for research documentation and reproducibility, not an endorsement of their content.
 
 ---
 
@@ -152,7 +162,7 @@ Following standard practice in security measurement, the exact attack prompts ar
 This repository is dual-licensed to separate code from data:
 
 - **Code** — [MIT License](LICENSE.md).
-- **Data** (the result CSVs under `csv_results_defence/` and the JSON reports under `without_defence/`) — [Creative Commons Attribution 4.0 International (CC BY 4.0)](DATA_LICENSE.md).
+- **Data** (the artifacts under `results_defence_applied/`, `results_without_defence/`, and `results_in_scope_validation/`) — [Creative Commons Attribution 4.0 International (CC BY 4.0)](DATA_LICENSE.md), subject to the third-party-material notice in that license.
 
 ---
 

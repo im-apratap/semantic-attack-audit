@@ -1,10 +1,18 @@
 # Data License — Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-**What this covers:** the datasets in this repository — the result CSVs under
-`csv_results_defence/` and the JSON reports under `without_defence/`.
+**What this covers:** the research data artifacts in this repository:
+`results_defence_applied/`, `results_without_defence/`, and
+`results_in_scope_validation/`, including their CSV, JSON, and text files.
 
-**What it does NOT cover:** the software/analysis code, which is licensed
-separately under the MIT License (see [`LICENSE.md`](LICENSE.md)).
+**What this does not cover:** software and analysis code, which are licensed
+separately under the MIT License (see [`LICENSE.md`](LICENSE.md)). This license
+only applies to material the licensor is authorized to license. The repository
+contains prompts collected from public sources and model-generated responses;
+third-party source material, names, marks, and any material subject to separate
+terms remain subject to their applicable rights and terms. This document does
+not grant rights to that material or represent that every source permits
+redistribution. Users are responsible for checking applicable terms and law
+before reusing it.
 
 ### In short, you are free to:
 
