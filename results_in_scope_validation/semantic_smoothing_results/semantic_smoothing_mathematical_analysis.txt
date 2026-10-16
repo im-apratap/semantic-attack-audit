@@ -1,0 +1,252 @@
+════════════════════════════════════════════════════════════════════
+SEMANTIC SMOOTHING — MATHEMATICAL ANALYSIS
+════════════════════════════════════════════════════════════════════
+Generated: 2026-10-05T20:12:12.096439
+Total=240 | Failures=34(14.2%) | Successes=206(85.8%)
+
+────────────────────────────────────────────────────────────────────
+1. PER-FAILURE ANALYSIS
+────────────────────────────────────────────────────────────────────
+
+[001] serial=2 model=gemma4:31b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[002] serial=8 model=deepseek-r1:32b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[003] serial=17 model=deepseek-r1:32b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[004] serial=1 model=deepseek-r1:32b tt=synonym_replacement M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[005] serial=1 model=phi4:14b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[006] serial=2 model=phi4:14b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[007] serial=5 model=phi4:14b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[008] serial=6 model=phi4:14b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[009] serial=7 model=phi4:14b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[010] serial=8 model=phi4:14b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[011] serial=13 model=phi4:14b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[012] serial=15 model=phi4:14b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[013] serial=16 model=phi4:14b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[014] serial=19 model=phi4:14b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[015] serial=1 model=phi4:14b tt=synonym_replacement M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[016] serial=2 model=phi4:14b tt=synonym_replacement M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[017] serial=4 model=phi4:14b tt=synonym_replacement M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[018] serial=7 model=phi4:14b tt=synonym_replacement M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[019] serial=11 model=phi4:14b tt=synonym_replacement M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[020] serial=18 model=phi4:14b tt=synonym_replacement M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[021] serial=19 model=phi4:14b tt=synonym_replacement M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[022] serial=20 model=phi4:14b tt=synonym_replacement M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[023] serial=1 model=granite4.1:30b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[024] serial=2 model=granite4.1:30b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[025] serial=5 model=granite4.1:30b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[026] serial=6 model=granite4.1:30b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[027] serial=7 model=granite4.1:30b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[028] serial=8 model=granite4.1:30b tt=paraphrase M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+[029] serial=11 model=granite4.1:30b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[030] serial=14 model=granite4.1:30b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[031] serial=19 model=granite4.1:30b tt=paraphrase M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[032] serial=14 model=granite4.1:30b tt=synonym_replacement M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[033] serial=16 model=granite4.1:30b tt=synonym_replacement M=3
+  R=-2.3909 → No cert
+  p_A=0.0084 (BELOW 0.5)
+  binom_p=0.5000 → fail reject
+
+[034] serial=18 model=granite4.1:30b tt=synonym_replacement M=3
+  R=-10.0000 → No cert
+  p_A=0.0000 (BELOW 0.5)
+  binom_p=0.1250 → fail reject
+
+────────────────────────────────────────────────────────────────────
+2. SEMANTIC SIMILARITY
+────────────────────────────────────────────────────────────────────
+N=81 mean=0.4466 std=0.3787
+
+────────────────────────────────────────────────────────────────────
+3. CLOPPER-PEARSON TABLES
+────────────────────────────────────────────────────────────────────
+
+  M=5:    k   k/M      p_A       R cert
+            0  0.00   0.0000 -10.0000 NO
+            1  0.20   0.0051 -2.5723 NO
+            2  0.40   0.0527 -1.6188 NO
+            3  0.60   0.1466 -1.0510 NO
+            4  0.80   0.2836 -0.5722 NO
+            5  1.00   0.4782 -0.0547 NO
+
+  M=10:    k   k/M      p_A       R cert
+            0  0.00   0.0000 -10.0000 NO
+            1  0.10   0.0025 -2.8034 NO
+            2  0.20   0.0252 -1.9564 NO
+            3  0.30   0.0667 -1.5005 NO
+            4  0.40   0.1216 -1.1673 NO
+            5  0.50   0.1871 -0.8887 NO
+            6  0.60   0.2624 -0.6360 NO
+            7  0.70   0.3475 -0.3920 NO
+            8  0.80   0.4439 -0.1411 NO
+            9  0.90   0.5550  0.1383 YES
+           10  1.00   0.6915  0.5001 YES
+
+  M=20:    k   k/M      p_A       R cert
+            0  0.00   0.0000 -10.0000 NO
+            1  0.05   0.0013 -3.0197 NO
+            2  0.10   0.0123 -2.2461 NO
+            3  0.15   0.0321 -1.8512 NO
+            4  0.20   0.0573 -1.5776 NO
+            5  0.25   0.0866 -1.3622 NO
+            6  0.30   0.1189 -1.1803 NO
+            7  0.35   0.1539 -1.0198 NO
+            8  0.40   0.1912 -0.8735 NO
+            9  0.45   0.2306 -0.7369 NO
+           10  0.50   0.2720 -0.6069 NO
+           11  0.55   0.3153 -0.4809 NO
+           12  0.60   0.3605 -0.3570 NO
+           13  0.65   0.4078 -0.2332 NO
+           14  0.70   0.4572 -0.1075 NO
+           15  0.75   0.5090  0.0224 YES
+           16  0.80   0.5634  0.1596 YES
+           17  0.85   0.6211  0.3083 YES
+           18  0.90   0.6830  0.4762 YES
+           19  0.95   0.7513  0.6785 YES
+           20  1.00   0.8316  0.9604 YES
+
+────────────────────────────────────────────────────────────────────
+4. BY TRANSFORMATION
+────────────────────────────────────────────────────────────────────
+  paraphrase                n=  120 fail= 18.3% avgR=-1.4622
+  synonym_replacement       n=  120 fail= 10.0% avgR=-1.0927
+
+────────────────────────────────────────────────────────────────────
+5. BY MODEL
+────────────────────────────────────────────────────────────────────
+  gemma4:31b                 n=   40 fail=  2.5% avgR=-0.6117
+  deepseek-r1:32b            n=   40 fail=  7.5% avgR=-0.7231
+  phi4:14b                   n=   40 fail= 45.0% avgR=-3.0519
+  granite4.1:30b             n=   40 fail= 30.0% avgR=-2.1853
+  olmo-3.1:32b               n=   40 fail=  0.0% avgR=-0.5464
+  qwen3.6:35b                n=   40 fail=  0.0% avgR=-0.5464
+
+════════════════════════════════════════════════════════════════════
+END
+════════════════════════════════════════════════════════════════════
